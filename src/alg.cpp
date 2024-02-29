@@ -1,5 +1,6 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
+#include <climits>
 #include "alg.h"
 
 
@@ -40,7 +41,7 @@ uint64_t nextPrime(uint64_t value) {
 // вставьте код функции
     uint64_t i;
     for (i = value + 1; i < LLONG_MAX; i++) {
-        if (chekPrime(i) == 1) {
+        if (checkPrime(i) == 1) {
             return i;
         }
     }
@@ -50,7 +51,7 @@ uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
     uint64_t i, sum = 0;
     for (int i = 2; i < hbound; i++) {
-        if (chekPrime(i) == 1) {
+        if (checkPrime(i) == 1) {
             sum += i;
         }
     }
